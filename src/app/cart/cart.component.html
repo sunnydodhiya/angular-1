@@ -1,0 +1,24 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col">shortDescription</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active" *ngFor="let c of cartt">
+      <th scope="row">{{ c.name }}</th>
+      <td>{{ c.shortDescription }}</td>
+      <td>{{ c.price }}</td>
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="toDelete(c.id, c.price)"
+      >
+        Delete
+      </button>
+    </tr>
+  </tbody>
+</table>

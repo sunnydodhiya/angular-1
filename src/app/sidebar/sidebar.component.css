@@ -1,0 +1,10 @@
+.example-container {
+  width: 1300px;
+  height: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.xx {
+  width: 200px;
+  height: 600px;
+  text-align: center;
+}

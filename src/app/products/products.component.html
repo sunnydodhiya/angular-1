@@ -1,0 +1,70 @@
+<!-- <br />
+
+<div class="row">
+  &nbsp; &nbsp;
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h4 class="card-title">Secondary card title</h4>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+    </div>
+  </div>
+  &nbsp; &nbsp;
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h4 class="card-title">Secondary card title</h4>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+    </div>
+  </div>
+  &nbsp; &nbsp;
+  <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+    <div class="card-header">Blacberry shoes M12B3</div>
+    <div class="card-body">
+      <h4 class="card-title">Hand made</h4>
+      <p class="card-text">
+       One of the bestseller.
+      </p>
+    </div>
+  </div>
+</div> -->
+<br />
+<div class="row">
+  <div class="col-sm-4" *ngFor="let c of products">
+    <div class="card text-white bg-dark mb-3">
+      <div class="card-header">{{ c.name }}</div>
+      <div class="card-body">
+        <h4 class="card-title">{{ c.shortDescription }}</h4>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="addIt(c.id, c.shortDescription, c.price)"
+        >
+          Buy
+        </button>
+        &nbsp;
+        <button
+          type="button"
+          class="btn btn-primary"
+          [routerLink]="['/product-info/', c.id]"
+        >
+          View Details
+        </button>
+        <!-- <button
+          type="button"
+          class="btn-btn-warning"
+          (click)="onCourseDelete(c.id)"
+        >
+          delete
+        </button> -->
+      </div>
+    </div>
+  </div>
+</div>

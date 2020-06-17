@@ -1,0 +1,32 @@
+<!-- <br />
+<a class="btn btn-primary btn-lg" role="button" (click)="gotoHome()"
+  >Go to Products Page</a
+> -->
+<div class="example-button-container">
+  &nbsp;&nbsp;&nbsp;
+  <button
+    mat-fab
+    color="warn"
+    aria-label="Example icon button with a home icon"
+    (click)="gotoHome()"
+  >
+    <mat-icon>home</mat-icon>
+  </button>
+</div>
+<h3><b>Go to Products Page</b></h3>
+<br />
+<br />
+<div class="jumbotron">
+  <h1 class="display-3">Category : {{ target.name }}</h1>
+  <p class="lead">Model : {{ target.shortDescription }}</p>
+  <hr class="my-4" />
+  <p>Price : {{ target.price }}</p>
+  <p class="lead">
+    <a
+      class="btn btn-primary btn-lg"
+      role="button"
+      (click)="addIt(target.id, target.shortDescription, target.price)"
+      >Add to cart</a
+    >
+  </p>
+</div>
